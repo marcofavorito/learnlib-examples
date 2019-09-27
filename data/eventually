@@ -1,14 +1,85 @@
-digraph {
-	fake [style=invisible]
-	0 [root=true]
-	1 [shape=doublecircle]
-	fake -> 0 [style=bold]
-	0 -> 0 [label="{}"]
-	0 -> 0 [label="{B}"]
-	0 -> 1 [label="{A, B}"]
-	0 -> 1 [label="{A}"]
-	1 -> 1 [label="{A, B}"]
-	1 -> 1 [label="{B}"]
-	1 -> 1 [label="{}"]
-	1 -> 1 [label="{A}"]
-}
+N	
+N	B
+N	
+Y	A,B
+Y	A
+N	B;B
+N	B;
+Y	B;A,B
+Y	B;A
+N	;B
+N	;
+Y	;A,B
+Y	;A
+Y	A,B;B
+Y	A,B;
+Y	A,B;A,B
+Y	A,B;A
+Y	A;B
+Y	A;
+Y	A;A,B
+Y	A;A
+N	B;B;B
+N	B;B;
+Y	B;B;A,B
+Y	B;B;A
+N	B;;B
+N	B;;
+Y	B;;A,B
+Y	B;;A
+Y	B;A,B;B
+Y	B;A,B;
+Y	B;A,B;A,B
+Y	B;A,B;A
+Y	B;A;B
+Y	B;A;
+Y	B;A;A,B
+Y	B;A;A
+N	;B;B
+N	;B;
+Y	;B;A,B
+Y	;B;A
+N	;;B
+N	;;
+Y	;;A,B
+Y	;;A
+Y	;A,B;B
+Y	;A,B;
+Y	;A,B;A,B
+Y	;A,B;A
+Y	;A;B
+Y	;A;
+Y	;A;A,B
+Y	;A;A
+Y	A,B;B;B
+Y	A,B;B;
+Y	A,B;B;A,B
+Y	A,B;B;A
+Y	A,B;;B
+Y	A,B;;
+Y	A,B;;A,B
+Y	A,B;;A
+Y	A,B;A,B;B
+Y	A,B;A,B;
+Y	A,B;A,B;A,B
+Y	A,B;A,B;A
+Y	A,B;A;B
+Y	A,B;A;
+Y	A,B;A;A,B
+Y	A,B;A;A
+Y	A;B;B
+Y	A;B;
+Y	A;B;A,B
+Y	A;B;A
+Y	A;;B
+Y	A;;
+Y	A;;A,B
+Y	A;;A
+Y	A;A,B;B
+Y	A;A,B;
+Y	A;A,B;A,B
+Y	A;A,B;A
+Y	A;A;B
+Y	A;A;
+Y	A;A;A,B
+Y	A;A;A

@@ -19,10 +19,10 @@ parser.add_argument("--fluents", type=str, nargs="+", required=False, default=No
 def compute_traces(labels, max_length=4):
     """Compute traces from labels."""
     alphabet = set()
-    for k in range(1, len(labels) + 1):
+    for k in range(0, len(labels) + 1):
         for comb in itertools.combinations(labels, k):
             alphabet.add(PLInterpretation(comb))
-    
+
     traces = []
     for n in range(max_length):
         traces.extend(itertools.product(alphabet, repeat=n))
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     path = Path(arguments.dirpath)
     path.mkdir(exist_ok=True)
-    fp = open(str(path.joinpath(name)) + ".txt", mode="w")
+    fp = open(str(path.joinpath(name)), mode="w")
 
     p = LTLfParser()
     f = p(arguments.formula)

@@ -40,11 +40,11 @@ N\tFluent1;Fluent2
 
 - Run:
 
-      mvn exec:java  -Dexec.mainClass=com.sapienza.App -Dexec data/eventually.txt
+      mvn exec:java  -Dexec.mainClass=com.sapienza.App -Dexec data/eventually
 
   alternatively:
 
-      ./learnrb ./data/eventually.txt
+      ./learnrb ./data/eventually
 
 The DOT file of the DFA learned will be stored in `data/eventually`.
 
@@ -56,7 +56,7 @@ We get the automaton `./data/always-eventually.svg`:
 
 ![](./data/always-eventually.svg)
 
-and the traces in `./data/always-eventually.txt`
+and the traces in `./data/always-eventually`
 ```
 Y	
 Y	A,B
