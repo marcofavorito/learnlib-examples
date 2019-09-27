@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export JAVA_PROGRAM_ARGS=`echo "$@"`
+export JAVA_PROGRAM_ARGS=`echo "$1"`
 mvn exec:java -Dexec.mainClass="com.sapienza.App" -Dexec.args="$JAVA_PROGRAM_ARGS"
-
+dot -Tsvg "$1.learned" -O 
 

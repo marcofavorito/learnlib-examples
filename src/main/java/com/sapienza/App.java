@@ -17,7 +17,10 @@ import net.automatalib.words.Word;
 import net.automatalib.words.impl.ListAlphabet;
 import picocli.CommandLine;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -100,7 +103,10 @@ public class App implements Callable<Integer>
         System.out.println();
         System.out.println("Model: ");
         GraphDOT.write(result, inputs, System.out); // may throw IOException!
-        GraphDOT.write(result, inputs, System.out); // may throw IOException!
+
+        BufferedWriter bw = Files.newBufferedWriter(Paths.get(file.getAbsolutePath() + ".learned"));
+        GraphDOT.write(result, inputs, bw); // may throw IOException!
+
 
         Visualization.visualize(result, inputs);
 

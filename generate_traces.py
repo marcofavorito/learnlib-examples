@@ -11,7 +11,7 @@ from pathlib import Path
 parser = argparse.ArgumentParser("generate_traces")
 parser.add_argument("formula", type=str, help="LTLf formula.")
 parser.add_argument("name", type=str, help="Name of the output.")
-parser.add_argument("--dirpath", type=str, default="data", help="Directory where to save the output.")
+parser.add_argument("--dirpath", type=str, default=".", help="Directory where to save the output.")
 parser.add_argument("--max-length", type=int, default=4, help="Max length of the traces.")
 parser.add_argument("--fluents", type=str, nargs="+", required=False, default=None, help="The labels, e.g. --alphabet A B C")
 

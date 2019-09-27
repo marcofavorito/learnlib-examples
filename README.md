@@ -1,10 +1,18 @@
 # learnlib-examples
-Learning regular languages using LearnLib
+Learning regular languages using LearnLib.
+
+## Dependencies
+
+- [Graphviz](https://www.graphviz.org/download/)
+- To install the Python packages for the script `generate_traces.py` 
+
+      pip install -r requirements.txt
 
 ## Generate traces
 
 `generate_traces.py` is a Python script that given an LTLf formula generates
 a list of traces labelled with the satisfaction wrt the provided formula.
+
 
 E.g. to generate traces for 'eventually A':
 
@@ -23,7 +31,7 @@ Y\tFluent1,Fluent2,Fluent3;Fluent2;Fluent3
 N\tFluent1;Fluent2
 ```
 
-## CLI tool to learn from traces
+## Learn from traces
 
 - Install [Maven](https://maven.apache.org/)
 - Compile
@@ -38,4 +46,33 @@ N\tFluent1;Fluent2
 
       ./learnrb ./data/eventually.txt
 
+The DOT file of the DFA learned will be stored in `data/eventually`.
 
+## Demo
+
+- `python generate_traces.py "G F A" always-eventually --fluents A B --max-length 6 --dirpath data` 
+
+We get the automaton `./data/always-eventually.svg`:
+
+![](./data/always-eventually.svg)
+
+and the traces in `./data/always-eventually.txt`
+```
+Y	
+Y	A,B
+Y	A
+N	B
+Y	A,B;A,B
+Y	A,B;A
+N	A,B;B
+Y	A;A,B
+Y	A;A
+...
+```
+
+- `mvn compile`
+- `./learnrb data/always-eventually`
+
+We get `./data/always-eventually.txt.learned.svg`:
+
+![](./data/always-eventually.txt.learned.svg)
