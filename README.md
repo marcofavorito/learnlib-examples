@@ -1,7 +1,13 @@
 # learnlib-examples
 Learning regular languages using LearnLib.
 
-## Dependencies
+## Preliminaries
+
+Download the code:
+
+    git clone https://github.com/marcofavorito/learnlib-examples.git
+
+Installare the dependencies:
 
 - [Graphviz](https://www.graphviz.org/download/)
 - To install the Python packages for the script `generate_traces.py` 
