@@ -16,7 +16,7 @@ a list of traces labelled with the satisfaction wrt the provided formula.
 
 E.g. to generate traces for 'eventually A':
 
-   python generate_traces.py "F A" eventually --fluents A B --max-length 4 --dirpath data
+    python generate_traces.py "F A" eventually --fluents A B --max-length 4 --dirpath data
 
 The output will be in the directory `data/`, and you'll get:
 
@@ -73,6 +73,6 @@ Y	A;A
 - `mvn compile`
 - `./learnrb data/always-eventually`
 
-We get `./data/always-eventually.txt.learned.svg`:
+We get `./data/always-eventually.learned.svg`:
 
-![](./data/always-eventually.txt.learned.svg)
+![](./data/always-eventually.learned.svg)
